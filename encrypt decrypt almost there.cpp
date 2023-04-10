@@ -11,7 +11,7 @@ int main(){
    std::cout<<"Do you want to encrypt or decrypt the number? "<<std::endl;
    std::cout<<"Type Y/y for encryption or N/n for decryption: ";
    std::cin>>letter;
-    if(x == 'Y' || x == 'y') // if user wants to encrypt.
+    if(letter == 'Y' || letter == 'y') // if user wants to encrypt.
     {
         // we extract the individual digits from the number we accepted in the next 4 lines of code.
        array[1]=array[0] / 1000;
@@ -31,7 +31,7 @@ int main(){
        array[13] = (array[9] * 1000) + (array[10] * 100)+(array[11] * 10) + array[12]; // we are displaying the number in four digit form.
        std::cout<<"The encrypted number is "<<array[13]<<std::endl;
     }
-    else if (x == 'N' || x == 'n') //if user wants to decrypt instead.
+    else if (letter == 'N' || letter == 'n') //if user wants to decrypt instead.
     {
         // we extract the individual digits from the number we accepted, in the next 4 lines of code.
        array[1] = array[0] / 1000;
@@ -54,7 +54,7 @@ int main(){
     std::cout<<"Do you want to continue? "<<std::endl;
     std::cout<<"Type Y/y for yes or N/n for no: ";
     std::cin>>letter;
-    if (x== 'Y' || x == 'y ') // if user wants to continue
+    if (letter == 'Y' || letter == 'y ') // if user wants to continue
     goto backtofirst; // repeat the process of accepting a number from the user.
     else // if user doesn't want to continue
     std::cout<<"Thank you for using this program!"<<std::endl;
